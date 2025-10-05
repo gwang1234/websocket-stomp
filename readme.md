@@ -94,6 +94,3 @@ stomp
   - 모든 서버는 redis를 subscribe하고 있기에 redis로부터 발행된 message를 받아서, 본인 서버의 topic 메세지를 발행
   - 각 서버를 subscribe하고 있는 클라이언트들은 특정 room에 전파된 message를 수신
 
-<br><br>
-
-## InnoDB
