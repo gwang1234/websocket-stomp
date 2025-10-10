@@ -32,7 +32,7 @@ public class Securityconfigs {
                 .csrf(AbstractHttpConfigurer::disable) // csrf 비활성화
                 .httpBasic(AbstractHttpConfigurer::disable) // Http Basic 비활성화
                 .authorizeHttpRequests(a -> a.requestMatchers(
-                        "/member/create", "/member/doLogin", "/connect").permitAll()
+                        "/member/create", "/member/doLogin", "/connect/**").permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(s->s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
